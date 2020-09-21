@@ -1,0 +1,30 @@
+/*
+ * 익명함수(anonymous function)
+ *  - 이름이 없는 함수
+ *  - 한 줄로 정의되는 함수
+ *  - 정의와 호출을 동시에 하는 경우
+ *  - python 람다 함수와 유사함   
+ *  - (인수) => 반환값 
+ *  ex) (x:Int) => x*x
+ */
+
+object Step02_anony {
+  
+  def main(args: Array[String]): Unit = {      
+      println("익명 함수 정의")
+      var anony_func = (x:Int) => x*x
+      println(anony_func(3))
+      
+      println("익명 함수 정의와 호출")
+      ((x:Int) => println(x*x))(3) // 정의와 호출
+      /*
+       *  (x:Int) => println(x*x) // 함수 정의 
+       *  (익명함수)(3) // 실인수 3으로 함수 호출  
+       */
+      
+      println("매칭된 아규먼트 값 표현")
+      println(1 to 5) // Range 1 to 5
+      println( (1 to 5).map(_*2) ) // Vector(2, 4, 6, 8, 10)     
+      
+  }
+}
